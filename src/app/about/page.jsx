@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumb from "@/components/common/breadcrumb/breadcrumb";
 import TeamAreaMain from "../../components/extra-page/team/index"
 import AboutUsArea from "@/components/home/about-us-area";
+import AboutUsDetail from "@/components/home/about-us-detail";
 import FooterFour from "@/components/Layouts/footer/footer-4";
 import HeaderThere from "@/components/Layouts/header/header-there";
 import Wrapper from "@/components/Layouts/wrapper";
@@ -102,6 +103,7 @@ const AboutUsPage = () => {
           backLink={"/"}
         />
         <AboutUsArea />
+        <AboutUsDetail />
         <ServicesAreaTwo />
         {/* <TestimonialArea /> */}
        

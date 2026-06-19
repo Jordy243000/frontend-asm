@@ -1,18 +1,12 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import about_img from "../../../public/assets/img/about/about.png";
+import { useAboutContent } from "@/hooks/use-about-content";
 
 const AboutUsArea = () => {
-  let [current, setCurrent] = React.useState("");
+  const aboutContent = useAboutContent();
 
-  React.useEffect(() => {
-    current = window.location.pathname;
-    setCurrent(current);
-
-    //console.log(current, "restyyyyyy");
-  }, []);
   return (
     <section
       className="about__area-2 pt-120 pb-60 wow fadeInUp"
@@ -32,10 +26,8 @@ const AboutUsArea = () => {
               data-wow-delay=".5s"
             >
               <div className="section__title mb-50">
-                <span className="sub-title">à propos de ASM</span>
-                <h2 className="title">
-                 ASM-Une Société de Solutions Numériques pour la Transformation du Transport Multimodal en RDC
-                </h2>
+                <span className="sub-title">{aboutContent.subtitle}</span>
+                <h2 className="title">{aboutContent.title}</h2>
               </div>
               <div className="about__content-tab-2 mt-40">
                 <ul className="nav mb-5" id="myTab" role="tablist">
@@ -89,19 +81,7 @@ const AboutUsArea = () => {
                     role="tabpanel"
                     aria-labelledby="approch-tab"
                   >
-                         <p>
-                      Aspirer à devenir un acteur de référence dans nos domaines d'activité, tant en République Démocratique du Congo qu'à l'international. Nous construisons cette ambition sur un socle d'expertise pointue, d'innovation continue et de valeurs humaines fortes.
-                    </p>
-                   
-                    {current === "/about" ? (
-                      ""
-                    ) : (
-                      <div className="about__content-tab-btn mt-35">
-                        <a className="fill-btn clip-md-btn" href={"/about"}>
-                          En savoir plus
-                        </a>
-                      </div>
-                    )}
+                    <p>{aboutContent.vision}</p>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -109,18 +89,7 @@ const AboutUsArea = () => {
                     role="tabpanel"
                     aria-labelledby="goal-tab"
                   >
-                   <p>
-                      Notre mission est d'inverser la tendance des pertes de revenus dues aux systèmes obsolètes. En exploitant la puissance du numérique, des données en temps réel et de processus transparents, nous accompagnons les institutions publiques pour optimiser la collecte, simplifier les procédures et libérer de nouvelles sources de revenus.
-                    </p>
-                    {current === "/about" ? (
-                      ""
-                    ) : (
-                      <div className="about__content-tab-btn mt-35">
-                        <a className="fill-btn clip-md-btn" href={"/about"}>
-                          En savoir plus
-                        </a>
-                      </div>
-                    )}
+                    <p>{aboutContent.mission}</p>
                   </div>
                   <div
                     className="tab-pane fade"
@@ -128,20 +97,9 @@ const AboutUsArea = () => {
                     role="tabpanel"
                     aria-labelledby="mision-tab"
                   >
-                     <p><strong>Audace:</strong> Capacité de repousser ses limites, sortir de sa zone de confort pour réaliser des actions difficiles.</p>
-                      <p><strong>Respect:</strong> Le strict respect aux règlements ainsi qu'à tous les membres du personnel et chacun des clients.</p>
-                      <p><strong>Intégrité:</strong> Agir avec honnêteté, respect et prendre des décisions justes ainsi qu'être fidèle à nos valeurs.</p>
-                      <p><strong>Loyauté:</strong> Respect de nos engagements par la fidélité à la parole donnée en interne aussi bien qu'en externe vis-à-vis de nos clients et partenaires.</p>
-
-                    {current === "/about" ? (
-                      ""
-                    ) : (
-                      <div className="about__content-tab-btn mt-35">
-                        <a className="fill-btn clip-md-btn" href={"/about"}>
-                          En savoir plus
-                        </a>
-                      </div>
-                    )}
+                    <div
+                      dangerouslySetInnerHTML={{ __html: aboutContent.values }}
+                    />
                   </div>
                 </div>
               </div>
@@ -156,12 +114,6 @@ const AboutUsArea = () => {
                   alt={"A propos de African Shipping Management (ASM) RDC"}
                 />
               </div>
-              {/* <div className="about__3-text clip-box-sm">
-                <span>
-                  <i className="far fa-trophy-alt"></i>
-                </span>
-                <h4 className="about__3-title">25 Years of experience</h4>
-              </div> */}
             </div>
           </div>
         </div>

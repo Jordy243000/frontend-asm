@@ -5,6 +5,7 @@ import Breadcrumb from "@/components/common/breadcrumb/breadcrumb";
 import breadcrumb_bg from "@/assets/img/breadcrumb/productBanner.png";
 import { useParams } from "next/navigation";
 import axios from "axios";
+import ProductTitleMenu from "@/components/common/product-title-menu";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 
@@ -24,7 +25,7 @@ const SingleProduct = ({}) => {
     const fetchData = async () => {
       try {
         const solutionResponse = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_ENDPOINT}/products?populate[0]=techstack&populate[1]=user&populate[2]=module&populate[3]=module.feature&populate[4]=photo&populate[5]=document
+          `${process.env.NEXT_PUBLIC_API_ENDPOINT}/products?populate[0]=techstack&populate[1]=user&populate[2]=module&populate[3]=module.feature&populate[4]=photo&populate[5]=document&populate[6]=menuLinks
 `,
           {
             headers: {
@@ -83,9 +84,11 @@ const SingleProduct = ({}) => {
                     </div>
                     <div className="postbox__content">
                       <div className="section__title mb-20">
-                        <h3 className="title-sm">
-                          {serviceData?.attributes?.title}
-                        </h3>
+                        <ProductTitleMenu
+                          title={serviceData?.attributes?.title}
+                          productId={serviceData?.id}
+                          menuLinks={serviceData?.attributes?.menuLinks}
+                        />
                       </div>
                       <div className="postbox__text mb-30">
                         <p className="content-para">

@@ -324,3 +324,20 @@
     }
 }
 // About 3 Style End Here
+
+.about__detail-area {
+    margin-top: -20px;
+
+    .about__detail-content {
+        p {
+            color: var(--clr-text-body);
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
