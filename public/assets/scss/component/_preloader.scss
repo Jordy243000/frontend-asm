@@ -47,8 +47,10 @@
 	}
   }
   
-  .loading-icon img {
+  .loading-icon img,
+  .half-spin {
 	animation: half-spin 1.5s infinite ease-in-out;
+	transform-style: preserve-3d;
   }
   
 //preloader 

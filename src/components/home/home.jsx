@@ -8,7 +8,6 @@ import FunfactSection from "./funfact-section";
 import BlogSection from "./blog-section";
 import ServicesAreaTwo from "./service-area";
 import ContactInfoArea from "./contact-info-area";
-import BrandSection from "../extra-page/about-us/brand-section";
 import ServiceCta from "./service-cta";
 import axios from "axios";
 import { Icon } from "@iconify/react";
@@ -98,7 +97,6 @@ const MainHomePage = () => {
       <ServiceCta />
       {/* <TestimonialArea /> */}
       <WorkProcessArea />
-      <BrandSection />
       <FunfactSection numberData={numberData} />
 
       <ContactInfoArea />

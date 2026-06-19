@@ -1,13 +1,10 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import Logo from "@/assets/img/logo/logo.png";
-import Image from "next/image";
 import OffCanvasMain from "@/components/common/off-canvas";
+import AnimatedLogo from "@/components/common/animated-logo";
 import Menus from "./menu";
 import axios from "axios";
-import { Icon } from "@iconify/react";
-//import { Icon } from "@iconify/react";
 
 const HeaderThere = () => {
   // Sticky Menu Area start
@@ -64,42 +61,6 @@ const HeaderThere = () => {
   const [isOffCanvasOpen, setIsOffCanvasOpen] = React.useState(false);
   return (
     <header>
-      <div className="header__top header__pad d-none d-md-block">
-        <div className="container">
-          <div className="row g-0 align-items-center">
-            <div className="col-xl-7 col-md-7">
-              <div className="header__text">
-                <span className="uppercase">
-                  African Shipping Management (ASM) RDC
-                </span>
-              </div>
-            </div>
-            <div className="col-xl-5 col-md-5 d-flex justify-content-end">
-              {socialData?.length > 0 ? (
-                <div className="header__social-link">
-                  <ul>
-                    {socialData?.map((datum, idx) => {
-                      return (
-                        <li key={idx}>
-                          <Link target="_blank" href={datum?.attributes?.link}>
-                            <Icon
-                              icon={datum?.attributes?.icon}
-                              width="16"
-                              height="16"
-                            />
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="header__bottom-wrapper white-bg pb-15">
         <div className="container">
           <div className="header__bottom p-relative">
@@ -108,11 +69,7 @@ const HeaderThere = () => {
                 <div className="col-xl-2 col-lg-2 col-md-2 col-9">
                   <div className="logo logo-transform">
                     <Link href="/">
-                      <Image
-                        src={Logo}
-                        style={{ width: "100px", height: "auto" }}
-                        alt="Logo African Shipping Management (ASM) RDC"
-                      />
+                      <AnimatedLogo />
                     </Link>
                   </div>
                 </div>
@@ -184,11 +141,7 @@ const HeaderThere = () => {
                 <div className="col-xl-2 col-lg-2">
                   <div className="logo d-none">
                     <Link href="/">
-                      <Image
-                        src={Logo}
-                        style={{ width: "100px", height: "auto" }}
-                        alt="Logo African Shipping Management (ASM)"
-                      />
+                      <AnimatedLogo alt="Logo African Shipping Management (ASM)" />
                     </Link>
                   </div>
                 </div>
@@ -216,11 +169,7 @@ const HeaderThere = () => {
             <div className="col-xl-2 col-lg-2 col-3">
               <div className="logo">
                 <Link href="/">
-                  <Image
-                    src={Logo}
-                    style={{ width: "100px", height: "auto" }}
-                    alt="Logo African Shipping Management (ASM)"
-                  />
+                  <AnimatedLogo alt="Logo African Shipping Management (ASM)" />
                 </Link>
               </div>
             </div>

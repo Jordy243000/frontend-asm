@@ -29,12 +29,8 @@ const menu_data = [
   {
     id: 3,
     hasDropdown: false,
-    title: "services",
-    link: "/services",
-    submenus: [
-      { title: "services", link: "/services" },
-      { title: "services-details", link: "/services-details" },
-    ],
+    title: "Carrière",
+    link: "/carriere",
   },
   {
     id: 5,
@@ -44,17 +40,6 @@ const menu_data = [
     submenus: [
       { title: "services", link: "/services" },
       { title: "services-details", link: "/services-details" },
-    ],
-  },
-  {
-    id: 6,
-    hasDropdown: false,
-    title: "à propos de nous",
-    link: "/about",
-    submenus: [
-      { title: "Blog", link: "/blog" },
-      { title: "blog-grid-3-col", link: "/blog-grid-3-col" },
-      { title: "blog-details", link: "/blog-details" },
     ],
   },
   {
@@ -71,8 +56,14 @@ const menu_data = [
   {
     id: 8,
     hasDropdown: false,
-    title: "Galerie",
-    link: "/gallery",
+    title: "Équipe",
+    link: "/equipe",
+  },
+  {
+    id: 6,
+    hasDropdown: false,
+    title: "à propos de nous",
+    link: "/about",
     submenus: [
       { title: "Blog", link: "/blog" },
       { title: "blog-grid-3-col", link: "/blog-grid-3-col" },

@@ -95,7 +95,7 @@ const FooterFour = () => {
                       <Link href="/">Accueil</Link>
                     </li>
                     <li>
-                      <Link href="/services">Services</Link>
+                      <Link href="/carriere">Carrière</Link>
                     </li>
                     <li>
                       <Link href="/products">Produits</Link>
@@ -109,7 +109,7 @@ const FooterFour = () => {
                       <Link href="/blog">Blog</Link>
                     </li>
                     <li>
-                      <Link href="/gallery">Galerie</Link>
+                      <Link href="/equipe">Équipe</Link>
                     </li>
                     <li>
                       <Link href="/contact">Nous contacter</Link>

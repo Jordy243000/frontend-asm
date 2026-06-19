@@ -2,6 +2,7 @@ import FooterFour from "@/components/Layouts/footer/footer-4";
 import HeaderThere from "@/components/Layouts/header/header-there";
 import Wrapper from "@/components/Layouts/wrapper";
 import MainHomePage from "@/components/home/home";
+import PartnersSection from "@/components/common/partners-section";
 import React from "react";
 
 export const metadata = {
@@ -89,6 +90,7 @@ const Home1 = () => {
       <Wrapper>
         <HeaderThere />
         <MainHomePage />
+        <PartnersSection />
         <FooterFour />
       </Wrapper>
     </>

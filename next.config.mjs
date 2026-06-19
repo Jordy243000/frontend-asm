@@ -12,6 +12,15 @@ const nextConfig = {
     domains: ["api.africansm-rdc.com"],
   },
   transpilePackages: ["next-mdx-remote"],
+  async redirects() {
+    return [
+      {
+        source: "/gallery",
+        destination: "/equipe",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

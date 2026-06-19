@@ -56,7 +56,14 @@ function generateSiteMap(services, products, blogs) {
       </url>
      
       <url>
-        <loc>${BASE_URL}/gallery</loc>
+        <loc>${BASE_URL}/carriere</loc>
+        <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+      </url>
+     
+      <url>
+        <loc>${BASE_URL}/equipe</loc>
         <lastmod>${new Date().toISOString().split("T")[0]}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>

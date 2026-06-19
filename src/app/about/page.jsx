@@ -6,7 +6,7 @@ import FooterFour from "@/components/Layouts/footer/footer-4";
 import HeaderThere from "@/components/Layouts/header/header-there";
 import Wrapper from "@/components/Layouts/wrapper";
 import breadcrumb_bg from "@/assets/img/breadcrumb/aboutBanner.png";
-import BrandSection from "@/components/extra-page/about-us/brand-section";
+import PartnersSection from "@/components/common/partners-section";
 import ServicesAreaTwo from "@/components/home/service-area";
 import TestimonialArea from "@/components/home/testimonial-area";
 import WorkProcessArea from "@/components/home/work-process-area";
@@ -107,7 +107,7 @@ const AboutUsPage = () => {
        
         <TeamAreaMain />
          <WorkProcessArea />
-        <BrandSection />
+        <PartnersSection />
         <FooterFour />
       </Wrapper>
     </>
